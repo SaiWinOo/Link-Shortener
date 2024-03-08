@@ -1,113 +1,135 @@
+import React from 'react';
+import Button from "@/components/Button";
+import WorkingSvg from '../images/illustration-working.svg';
 import Image from "next/image";
+import Recognition from '../images/icon-brand-recognition.svg';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+const Page = () => {
+    return (
+        <div>
+            <nav className={'flex items-center justify-between max-w-[1200px] mx-auto p-5'}>
+                <div className={'flex items-center gap-10'}>
+                    <div>
+                        <h2 className={'text-2xl font-semibold'}>Shortly</h2>
+                    </div>
+                    <ul className={'flex gap-4'}>
+                        <li className={'font-semibold text-gray-500'}>Features</li>
+                        <li className={'font-semibold text-gray-500'}>Pricing</li>
+                        <li className={'font-semibold text-gray-500'}>Resources</li>
+                    </ul>
+                </div>
+                <div className={'flex gap-5'}>
+                    <button className={'font-semibold text-gray-500'}>Login</button>
+                    <Button>Sign up</Button>
+                </div>
+            </nav>
+
+
+            <div className={'max-w-[1200px] p-5 mx-auto flex flex-col lg:flex-row items-center gap-10 pt-20'}>
+                <div>
+                    <h1 className={'text-5xl font-semibold mb-2'}>More than just shorter links</h1>
+                    <p className={'mb-8 text-gray-500'}>Build your brand's recognition and get detailed insights on how your links are performing</p>
+                    <Button>Get Started</Button>
+                </div>
+                <div>
+                    <Image src={WorkingSvg} className={''} alt=""/>
+                </div>
+            </div>
+
+            <div className={'bg-gray-50 min-h-[70vh] mt-32 relative'}>
+                <div className={'w-full absolute top-[-16%]'}>
+                    <div
+                        className={'bg-purple-700 max-w-[800px] mx-auto  w-full  flex items-center justify-between rounded-lg gap-5 p-7'}>
+                        <input type="text" className={'p-3 w-[75%] rounded-md '} placeholder={'Shorten a link here'}/>
+                        <Button className={'rounded-md p-3 w-[25%]'}>Shorten It!</Button>
+                    </div>
+                </div>
+                <div className={'pt-[10%]'}>
+                    <h1 className={'text-4xl font-semibold text-center my-2'}>Advanced Statistics</h1>
+                    <p className={'text-center text-gray-500'}>Track how your links are performing across the web with
+                        our advanced statistics dashboard.</p>
+                </div>
+
+                <div className={'mx-auto max-w-[1200px] gap-5 mt-24 grid grid-cols-3'}>
+                    <div className={'bg-white p-5 shadow rounded-lg '}>
+                        <div
+                            className={'bg-black rounded-full w-[70px] h-[70px] flex justify-center items-center mt-[-15%]'}>
+                            <Image src={Recognition}></Image>
+                        </div>
+                        <h3 className={'text-xl font-semibold mt-5 mb-2'}>Brand Recognition</h3>
+                        <p className={'text-gray-500'}>Boost your brand recognition with each link. Generic links don't
+                            mean a thing. Branded links help instil confidence in your content.</p>
+                    </div>
+
+                    <div className={'bg-white p-5 shadow rounded-lg '}>
+                        <div
+                            className={'bg-black rounded-full w-[70px] h-[70px] flex justify-center items-center mt-[-15%]'}>
+                            <Image src={Recognition}></Image>
+                        </div>
+                        <h3 className={'text-xl font-semibold mt-5 mb-2'}>Brand Recognition</h3>
+                        <p className={'text-gray-500'}>Boost your brand recognition with each link. Generic links don't
+                            mean a thing. Branded links help instil confidence in your content.</p>
+                    </div>
+
+                    <div className={'bg-white p-5 shadow rounded-lg '}>
+                        <div
+                            className={'bg-black rounded-full w-[70px] h-[70px] flex justify-center items-center mt-[-15%]'}>
+                            <Image src={Recognition}></Image>
+                        </div>
+                        <h3 className={'text-xl font-semibold mt-5 mb-2'}>Brand Recognition</h3>
+                        <p className={'text-gray-500'}>Boost your brand recognition with each link. Generic links don't
+                            mean a thing. Branded links help instil confidence in your content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className={'bg-purple-700 mt-32 text-white flex flex-col justify-center items-center py-10'}>
+                <h2 className={'font-semibold text-2xl mb-5'}>Boost your links today</h2>
+                <Button>Get Started</Button>
+            </div>
+
+            <footer className={'bg-black text-white pt-10 pb-20'}>
+                <div className={'max-w-[1200px] mx-auto  flex justify-between'}>
+                <div>
+                    <h2 className={'text-2xl font-semibold'}>Shortly</h2>
+                </div>
+                <div className={'flex gap-10'}>
+                    <div>
+                        <h4 className={'font-semibold text-lg'}>Features</h4>
+                        <ul className={'text-gray-300'}>
+                            <li>Link Shortening</li>
+                            <li>Branded Links</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className={'font-semibold text-lg'}>Features</h4>
+                        <ul className={'text-gray-300'}>
+                            <li>Link Shortening</li>
+                            <li>Branded Links</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className={'font-semibold text-lg'}>Features</h4>
+                        <ul className={'text-gray-300'}>
+                            <li>Link Shortening</li>
+                            <li>Branded Links</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+                    <div>
+                        fdasfa
+                    </div>
+                </div>
+
+            </footer>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    );
+};
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+export default Page;
