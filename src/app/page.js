@@ -13,6 +13,7 @@ import {FaFacebookSquare, FaTwitterSquare, FaInstagram} from "react-icons/fa";
 import CopyButton from "@/components/CopyButton";
 import axios from "axios";
 
+// e8a44aacbba4456db6b4d0329fc9dfb3
 
 
 const Page = () => {
@@ -20,7 +21,7 @@ const Page = () => {
 
     const [longLink,setLongLink] = useState('');
     const [error,setError] = useState('');
-    // const links = useState(localStorage.getItem('links'));
+    const [links,setLinks]     = useState(JSON.parse(localStorage.getItem('_links')));
 
 
     const shortenLink =  async () => {
@@ -35,14 +36,30 @@ const Page = () => {
         // }catch (e){
         //     console.log(e);
         // }
+        let links = [
+            {long : 'https://www.google.com/search?q=sea',short : 'https://rebrandly.com/fas'},
+            {long : 'https://www.google.com/search?q=sea',short : 'https://rebrandly.com/fas'},
+        ];
+
+        localStorage.setItem('_links',JSON.stringify(links));
 
         try{
-            let res = await axios.post('https://ulvis.net/API/write/get?url=https://www.youtube.com/', {
-                // headers : {
-                //     'Content-Type' : 'application/x-www-form-urlencoded'
-                // }
-            });
-            console.log(res);
+            let res = await axios.post('https://api.rebrandly.com/v1/links',
+                {
+                    destination: longLink,
+                },{
+                    headers : {
+                        "Content-Type": "application/json",
+                        "apikey": "e8a44aacbba4456db6b4d0329fc9dfb3",
+                        "workspace": "21f4332c5b6943ed950cc790f69e1fa5"
+                    }
+                });
+
+            let result = {long : longLink, short : res.data.shortUrl};
+
+            let temps = [result, ...links];
+            setLinks(temps);
+            localStorage.setItem('_links', JSON.stringify(temps));
         }catch (e)  {
             console.log(e);
         }
@@ -102,24 +119,16 @@ const Page = () => {
                 </div>
                 <div className={'pt-[10%]'}></div>
                 <div className={'my-5 max-w-[1200px] mx-auto'}>
-                    <div className={'flex justify-between mb-3 items-center bg-white p-3 shadow'}>
-                        <p>https://www.google.com</p>
-                        <p>https://cleanuri.com/HKhfsk</p>
-                        <CopyButton text={'hello world'}/>
-                    </div>
 
-                    <div className={'flex justify-between mb-3 items-center bg-white p-3 shadow'}>
-                        <p>https://www.google.com</p>
-                        <p>https://cleanuri.com/HKhfsk</p>
-                        <CopyButton text={'hello world'}/>
-                    </div>
-
-                    <div className={'flex justify-between mb-3 items-center bg-white p-3 shadow'}>
-                        <p>https://www.google.com</p>
-                        <p>https://cleanuri.com/HKhfsk</p>
-                        <CopyButton text={'hello world'}/>
-                    </div>
-
+                    {
+                        links?.map((l,index) => (
+                            <div key={index.toString()} className={'flex justify-between mb-3 items-center bg-white p-3 shadow'}>
+                                <p>{l.long}</p>
+                                <p>{l.short}</p>
+                                <CopyButton text={l.short}/>
+                            </div>
+                        ))
+                    }
 
                 </div>
                 <div>
