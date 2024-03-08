@@ -36,7 +36,8 @@ const Page = () => {
             });
             console.log(res);
         }catch (e)  {
-            alert(e.message);
+            // alert(e.message);
+            console.log(e);
         }
 
     }
