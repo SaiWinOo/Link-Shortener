@@ -64,7 +64,7 @@ const Page = () => {
             <div className={'max-w-[1200px] p-5 mx-auto flex flex-col lg:flex-row items-center gap-10 pt-20'}>
                 <div>
                     <h1 className={'text-5xl font-semibold mb-2'}>More than just shorter links</h1>
-                    <p className={'mb-8 text-gray-500'}>Build your brand's recognition and get detailed insights on how
+                    <p className={'mb-8 text-gray-500'}>Build your brand{"'"}s recognition and get detailed insights on how
                         your links are performing</p>
                     <Button>Get Started</Button>
                 </div>
@@ -130,7 +130,7 @@ const Page = () => {
                             </div>
                             <h3 className={'text-xl font-semibold mt-5 mb-2'}>Brand Recognition</h3>
                             <p className={'text-gray-500'}>Boost your brand recognition with each link. Generic links
-                                don't
+                                don{"'"}t
                                 mean a thing. Branded links help instil confidence in your content.</p>
                         </div>
 
