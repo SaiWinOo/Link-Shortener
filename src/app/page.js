@@ -28,15 +28,22 @@ const Page = () => {
             setError('Please provide the valid url');
             return;
         }
+
+        // try {
+        //     let res = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        //     console.log(res);
+        // }catch (e){
+        //     console.log(e);
+        // }
+
         try{
-            let res = await axios.post('https://cleanuri.com/api/v1/shorten',{url : longLink}, {
-                headers : {
-                    'Content-Type' : 'application/x-www-form-urlencoded'
-                }
+            let res = await axios.post('https://ulvis.net/API/write/get?url=https://www.youtube.com/', {
+                // headers : {
+                //     'Content-Type' : 'application/x-www-form-urlencoded'
+                // }
             });
             console.log(res);
         }catch (e)  {
-            // alert(e.message);
             console.log(e);
         }
 
