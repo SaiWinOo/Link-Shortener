@@ -8,7 +8,7 @@ const CopyButton = ({text = ''}) => {
 
     return (
         <CopyToClipboard onCopy={(text) =>setCopied(true)} text={text}>
-            <button className={`text-center w-[120px] ${copied ? 'bg-gray-600' : 'bg-primary'}  text-white rounded-full p-2 px-5`}>
+            <button className={`text-center w-full lg:w-[120px] ${copied ? 'bg-[#242028]' : 'bg-primary hover:bg-primary-700'}  text-white rounded-md lg:rounded-full p-2 px-5`}>
                 {copied ? 'Copied' : 'Copy'}
             </button>
         </CopyToClipboard>

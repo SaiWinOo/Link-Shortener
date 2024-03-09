@@ -4,7 +4,7 @@
 
 
 body{
-    @apply !font-mono;
+    @apply !font-sans;
 }
 
 input:focus-visible{
