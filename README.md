@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Link Shortener Website Frontend
 
-## Getting Started
+Visit - https://shortlink.saiwinoo.tech/
 
-First, run the development server:
+Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Preview of website.png](https://i.postimg.cc/Mp5G43Z8/Screenshot-2024-03-13-at-21-36-18.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Make your ugly link beautiful with one click! 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+Wanna build a website like this, here is the api services I build myself 
 
-To learn more about Next.js, take a look at the following resources:
+Repository - https://github.com/SaiWinOo/Link-Shortener-Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+URL - https://beshort1.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Preview of the backend service
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Preview.png](https://i.postimg.cc/wTzbvwzP/Screenshot-2024-03-13-at-21-34-21.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+***Hosted on Vercel***
